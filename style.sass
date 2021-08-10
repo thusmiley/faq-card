@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap')
+
+$violet: hsl(273, 75%, 66%)
+$blue: hsl(240, 73%, 65%)
+$divider: hsl(240, 5%, 91%)
+
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'Kumbh Sans', sans-serif
+    height: 100vh
+    background-image: linear-gradient($violet, $blue)
+    background-repeat: no-repeat
+    display: flex
+    justify-content: center
+    align-items: center
+    color: grey 
+    line-height: 1.6
+
+h1
+    color: black
+    margin-bottom: 20px        
+
+.container
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    border-radius: 15px
+    width: 70%
+    background: url("./images/illustration-woman-online-desktop.svg") left  center no-repeat, url("./images/bg-pattern-desktop.svg") left bottom no-repeat
+    background-size: 40% auto, 40% auto
+    background-position: -60px 50%, -60px 50%
+    background-color: #fff
+    
+.left
+    width: 45%
+
+.layout
+    display: none    
+    
+.box
+    width: 10%
+    position: absolute
+    top: 45%
+    left: 10%
+
+.right
+    width: 65%
+    padding: 50px 50px 50px 0px
+
+li
+    margin: 10px 0px 10px 0px
+    display: inline-block
+    font-size: 13px
+
+.question:hover
+    color: hsl(14, 88%, 65%)
+    cursor: pointer
+
+.question.active
+    color: black
+    font-weight: bold
+
+.row
+    border-bottom: solid $divider 1.5px
+    width: 100%
+    display: inline-block
+    align-items: center
+
+.answer
+    padding-bottom: 10px 
+    display: none
+    overflow: hidden   
+    font-size: 12px    
+
+.arrow
+    float: right
+    display: inline-block
+    padding: 15px 15px 0px 0px
+    align-items: center
+
+.arrow.active
+    transform: rotate(180deg)
+   
+@media (max-width: 750px)   
+    html, body
+        min-height: 100%
+        overflow: auto
+
+    .container
+        display: flex
+        flex-direction: column
+        width: 100%
+        margin: auto 20px auto 20px
+        background: url("./images/bg-pattern-mobile.svg") center top no-repeat
+        background-size: 60%
+        background-color: #fff
+        position: relative
+        overflow: visible
+
+    .left
+        width: 100%
+        height: 30vw
+
+    .layout
+        display: block
+        width: 70%
+        position: relative
+        top: -80%
+        left: 11%
+        object-fit: contain
+
+    .box 
+        display: none
+
+    .right
+        width: 100%
+        padding: 0px 20px 50px 20px
+
+    h1
+        text-align: center
+
+    .arrow
+        padding: 15px 0 15px  0
